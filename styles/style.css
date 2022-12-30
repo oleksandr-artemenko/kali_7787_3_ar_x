@@ -1117,6 +1117,7 @@ body::after {
   display: inline-block;
   min-height: 20px;
   margin-bottom: 2px;
+  padding-left: initial;
   padding-right: 30px;
   padding-top: 1px;
   font-size: 13px;
@@ -1245,7 +1246,7 @@ body::after {
   .top__wrapper {
     height: 708px;
     padding: 105px 0px 0px;
-    background-image: url("/images/top-bg-tab_v3.png");
+    background-image: url("../images/top-bg-tab_v3.png");
     overflow-x: initial;
   }
 
@@ -1416,6 +1417,7 @@ body::after {
 
   .access__wrapper {
     padding-top: 20px;
+    margin-bottom: -150px;
   }
 
   .access__title {
@@ -1442,6 +1444,10 @@ body::after {
 
   .access__container::before {
     display: none;
+  }
+
+  .lead-form__data-item[error-type="fullname"] .lead-form__tooltip_fullname {
+    display: block !important;
   }
 
   .access__button {
@@ -1484,7 +1490,7 @@ body::after {
   .top__wrapper {
     height: 550px;
     padding: 336px 0px 0px;
-    background-image: url("/images/top-bg-mob_v3.png");
+    background-image: url("../images/top-bg-mob_v3.png");
     overflow-x: initial;
   }
 
@@ -1574,6 +1580,7 @@ body::after {
     font-size: 20px !important;
     line-height: 24px !important;
     padding: 16px !important;
+    margin-top: 20px !important;
   }
 
   .container--sticky {
@@ -1757,7 +1764,8 @@ body::after {
   }
 
   .article__wrapper_2 {
-    padding: 87px 0 40px;
+    /* padding: 87px 0 40px; */
+    padding: 87px 0 0px;
   }
 
   .article__img_2 {
@@ -2041,8 +2049,8 @@ body::after {
   min-height: 20px;
   margin-bottom: 2px;
   padding-top: 0;
-  padding-left: 30px;
-
+  padding-right: 30px;
+  padding-left: initial;
   font-size: 13px;
   line-height: 1.23;
   letter-spacing: -0.02em;
@@ -2234,6 +2242,7 @@ html[lang="ar"] .lead-form__tooltip_country-restricted {
   color: #ffffff;
   cursor: pointer;
   transition: transform 0.3s ease 0s;
+  margin-top: 20px !important;
 }
 
 .lead-form__submit:hover {
@@ -4196,4 +4205,12 @@ html[lang="ar"] .lead-form__tooltip_country-restricted {
   height: 100%;
   position: absolute;
   inset: 0;
+}
+
+.lead-form__data-item[error-type="fullname"] .lead-form__tooltip_fullname {
+  display: block !important;
+}
+
+.lead-form__data-item[error-type="email"] .lead-form__tooltip_email-regex {
+  display: block;
 }

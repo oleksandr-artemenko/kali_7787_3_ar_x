@@ -345,6 +345,21 @@ var restrictedCountries = ["223", "104"]; /*"Ukraine", "Israel"*/
             var nameReg = /^[a-zA-Z\u0600-\u06FF\s]+$/; /* a-zA-Z + Arabic */
             return nameReg.test(name) ? name.length >= 2 : false;
           },
+          fullname: function (fullname) {
+            var fullnameReg =
+              /^[a-zA-Z\u0600-\u06FF\s]+$/; /* a-zA-Z + Arabic */
+
+            let fullnameArray = fullname.split(" ");
+            fullnameArray.forEach((value) => {
+              if (value === "") {
+                fullnameArray.splice(fullnameArray.indexOf(value), 1);
+              }
+            });
+
+            return fullnameReg.test(fullnameArray.join(""))
+              ? fullnameArray.join("").length >= 2 && fullnameArray.length >= 2
+              : false;
+          },
           email: function (email) {
             var emailReg =
               /^[a-zA-Z0-9.’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
